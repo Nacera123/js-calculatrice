@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <center>
+    <h4 style="font-family: algerian; color: purple;" padding-top="10px">S1-ExoCodeScript</h4>
+  </center><br>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+
+<body style="margin-left: 15%; margin-right: 15%;">
+
+  <center>
+
+    <div id="Jf"></div>
+    <h1 style="font-family: algerian; color: purple;" allign-text="center">Calculatrice avec les fonctions +, x, -, /
+    </h1><br>
+
+    <form>
+
+      <label style="font-family: algerian; color: rgb(182, 59, 182);">Calculatrice </label><br>
+      <!--<input type="number" id="a" placeholder="" ><br>-->
+      <input type="text" id="ope" placeholder=""><br><br>
+
+      <input type="button" id="nbr7" class="btn btn-basic" onclick="recuperation(7);" value="7"></input>
+      <input type="button" id="nbr8" class="btn btn-basic" onclick="recuperation(8);" value="8"></input>
+      <input type="button" id="nbr9" class="btn btn-basic" onclick="recuperation(9)" value="9"></input>
+      <button type="button" class="btn btn-danger" id="sur" onclick="Division();">/</button><br>
+
+      <input type="button" id="nbr4" class="btn btn-basic" onclick="recuperation(4);" value="4"></input>
+      <input type="button" id="nbr5" class="btn btn-basic" onclick="recuperation(5);" value="5"></input>
+      <input type="button" id="nbr6" class="btn btn-basic" onclick="recuperation(6);" value="6"></input>
+      <button type="button" class="btn btn-success" id="fois" onclick="multiplication();">x</button><br>
+
+      <input type="button" id="nbr1" class="btn btn-basic" onclick="recuperation(1);" value="1"></input>
+      <input type="button" id="nbr2" class="btn btn-basic" onclick="recuperation(2);" value="2"></input>
+      <input type="button" id="nbr3" class="btn btn-basic" onclick="recuperation(3);" value="3"></input>
+      <button type="button" class="btn btn-warning" id="moins" onclick="Soustraction();">-</button><br>
+
+      <input type="button" id="nbr0" class="btn btn-basic" onclick="recuperation(0);" value="0"></input>
+      <button type="button" class="btn btn-primary" id="plus" onclick="Addition();">+</button>
+      <button type="button" class="btn btn-basic" onclick="();">||</button><br><br>
+      <button type="button" id="btn" class="btn btn-dark" onclick="memo();">MEMOIRE</button><br><br>
+
+    </form>
+
+
+    <button type="button" id="btn" class="btn btn-warning" onclick="vide();">CLEAR</button><br><br>
+    <button type="button" id="btn" class="btn btn-success" onclick="egal();">Egal</button><br><br>
+
+    <!-- Ici, j'insère une tableau dans lequel viendront s'afficher les sommes, le produit, le reste et la différence des calculs par le Document.getelemetById -->
+
+    <table class="table" margin-left="20%;" margin-right="20%;">
+      <thead>
+        <tr>
+          <th scope="col">operation</th>
+          <th scope="col">resultat</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td id="emplacement1">
+            <p>Résultat</p>
+          </td>
+          <td id="emplacement">
+            <p>Produit</p>
+          </td>
+
+
+          <!-- <tr id="emplacement1">vide</tr>
+            <tr id="emplacement" >vide</tr> -->
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- <div class="row">
+        <div class= col-sm-2>
+
+          <aside>
+            <p id="emplacement1" ></p>
+          </aside>
+
+          <aside>
+            <p id="emplacement" ></p>
+          </aside>
+
+        </div> -->
+    </div>
+
+
+
+  </center>
+
+  <script src="calc.js"></script>
+
+  <body>
+
+    <html>
